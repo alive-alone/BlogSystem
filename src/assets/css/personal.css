@@ -1,0 +1,258 @@
+/* 左侧列表 */
+body {
+  /* background-color: rgb(236, 235, 235); */
+  background-color: aliceblue;
+}
+#app {
+  /* padding: 5px 15px; */
+  margin: 0 0 32px;
+  /* display: flex;
+  justify-content:space-between;  */
+  padding: 10px;
+}
+
+#user-center-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content:space-between; 
+}
+
+/* 左边导航栏 */
+.container-left {
+  width: 190px;
+  text-align: center;
+  /* padding: 5px 10px; */
+  /* background-color: rgb(255, 251, 251); */
+  border: 1px solid rgba(107, 105, 105, 0.5);
+  margin: 20px 0 10px 50px;
+  /* position: sticky; */
+}
+
+.container-left ul {
+  /* background: aliceblue; */
+  height: 80%;
+  background-color: rgb(252, 252, 252);
+}
+
+.container-left li {
+  text-align: center;
+  
+  
+}
+.container-left a {
+  display:block;
+  font-size: 14px;
+  padding: 20px 30px;
+}
+
+.personala {
+  background: #7b7b80;
+  color: aliceblue;
+}
+.container-left a:hover {
+  background: #7b7b80;
+  color: aliceblue;
+}
+
+.container-left a:focus {
+  background: #7b7b80;
+  color: aliceblue;
+}
+
+/* 右边内容 */
+.container-right{
+  width: 80%;
+  height: 160;
+  padding: 20px 40px 10px 0px;
+}
+
+.general-info {
+  /* background-color: aliceblue; */
+  background-color: rgb(252, 252, 252);
+  display: flex;
+  align-items: center;
+  justify-content:space-between; 
+  
+}
+.general-info-t {
+  display: flex;
+  align-items: center;
+  justify-content:space-between; 
+}
+
+.general-info-avatar {
+  text-align: left;
+  float: left;
+  margin-right: 10px;
+}
+.general-info-avatar img {
+  width: 92px;
+}
+.person-name {
+  width: 100px;
+  text-align: center;
+  display: inline-block;
+}
+
+.base-info {
+  margin: 20px 0 0 0 ;
+  padding: 10px 0 5px 10px;
+  /* background-color: aliceblue; */
+  background-color: rgb(252, 252, 252);
+  border-bottom: 1px solid rgba(197, 196, 196, 0.5);
+}
+
+.base-info-header {
+  padding: 10px;
+}
+
+.base-info-content-show {
+  padding: 10px 0 5px 10px;
+  /* background-color: aliceblue; */
+  background-color: rgb(252, 252, 252);
+}
+.base-info-content-show li {
+  /* margin: 10px 0 20px; */
+  padding: 32px 0px 16px;
+}
+
+.content-show-l {
+  width: 100px;
+  text-align: center;
+  margin-right: 50px;
+  float: left;
+  /* border-right: 1px solid rgba(197, 196, 196, 0.5); */
+}
+.content-show-r {
+  display: inline-block;
+}
+
+
+
+.base-info-content-edit {
+  padding: 20px 0 5px 20px;
+  /* background-color: aliceblue; */
+  background-color: rgb(252, 252, 252);
+  display: none;
+}
+
+.base-info-content-edit-form {
+  display: flex;
+  flex-wrap:wrap;
+}
+
+.el-form-item {
+  width: 50%;
+  height:64px;
+  margin-bottom: 50px;
+}
+
+.el-form-item__label {
+  display: inline-block;
+  color: rgb(97, 95, 95);
+  margin-bottom: 10px;
+}
+
+.el-form-item__content {
+  display: flex;
+}
+
+/* .el-radio {
+  width: 200px;
+} */
+.el-radio__input {
+  width: 100px;
+}
+
+.el-form-item__area select {
+  color: #656568;
+}
+
+.el-input__inner {
+  width: 80%;
+  height: 40px;
+  padding: 0 15px;
+}
+
+.el-textarea__inner {
+  width: 208px;
+  height:43.99px;
+}
+
+.el-form-item__area select {
+  width: 100px;
+}
+
+/* .el-radio__original {
+  display: none;
+} */
+.el-radio__original+label {
+  margin-top: 20px;
+  display: block;
+  height: 20px;
+  width: 200px;
+  text-indent: 23px;
+  background: url("../img/单选框.png") no-repeat left center;
+  cursor: pointer;
+}
+
+.el-radio__original:checked+label {
+  background: url("../img/单选框\ \(1\).png") no-repeat left center;
+}
+
+.account-body {
+  padding: 10px 0 5px 10px;
+  /* background-color: aliceblue; */
+  background-color: rgb(252, 252, 252);
+}
+
+.account-body-title {
+  padding: 10px;
+}
+
+.accout-body-item {
+  padding: 32px 0px 16px;
+  display: flex;
+  align-items: center;
+  justify-content:space-between; 
+}
+.accout-body-item p {
+  float: right;
+  display: inline;
+  padding-right: 16px;
+}
+
+.accout-body-span {
+  width: 64px;
+  margin: 0;
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
+  justify-content:space-between; 
+}
+
+/* .accout-body-span {
+  display: inline;
+} */
+
+.el-button {
+  margin:0 30px 0 0;
+  padding: 8px 24px;
+  border:none;
+  background-color: rgb(158, 167, 252);
+  font-size: 16px;
+  border-radius:20px 20px;
+  color: rgb(250, 250, 253);
+}
+
+.el-button:hover {
+  background-color: rgb(121, 133, 238);
+}
+
+.el-form-item-bottom {
+  /* text-align: center; */
+  width: 100%;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+}

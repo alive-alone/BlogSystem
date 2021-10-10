@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>alive-alone</title>
+  <link rel="stylesheet" href="../../assets/css/loading.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+</head>
+<body>
+  <div id="login-box">
+    <form action="">
+      <h1>Login</h1>
+      <div class="form">
+        <div class="item">
+          <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+          <input type="text" placeholder="Username" id="account" oninput ="check(value,id)" />
+          <div class="tooltip">
+            <span id="checkaccount" class="tooltiptext"></span>
+          </div>
+        </div>
+        <div class="item">
+          <i class="fa fa-key" aria-hidden="true"></i>
+          <input type="password" placeholder="Password" id="pass" oninput ="check(value,id)" />
+          <div class="tooltip">
+            <span id="useridSpan" class="tooltiptext"></span>
+          </div>
+        </div>
+      </div>
+      <div style="margin: 10px; font-size: 18px;">
+          <a href="./register.html"  style="margin-left: 2%;padding-right:100px ;">注册账号</a>
+          <a href="" >忘记密码?</a>
+      </div>
+      <div class="light" style="margin-top: 3%;" id="loadBut">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <a id="loadings">登录</a>
+      </div>
+    </form>
+  </div>
+</body>
+<!-- <script src="../../../modules/layDate-v5.3.1/layDate-v5.3.1/laydate/laydate.js"></script> -->
+<script src="../../assets/js/common/common.js"></script>
+<script src="../../assets/js/loading/loading.js"></script>
+<!-- <script src="../../assets/js/loading/register.js"></script> -->
+<script src="../../assets/js/common/inputJudge.js"></script>
+</html>

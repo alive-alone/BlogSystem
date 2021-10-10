@@ -1,0 +1,200 @@
+body {
+  background-color: rgb(209, 211, 212);
+}
+
+#login-box{
+  width: 40%;
+  height: 70%;
+  margin: 0 auto;
+  margin-top: 8%;
+  text-align: center;
+  background: #00000090;
+  padding: 20px 50px;
+}
+
+#login-box a {
+  color: rgb(177, 216, 248);
+  text-decoration: none;
+}
+
+#login-box h1{
+  color: rgb(177, 216, 248);
+  /* font-size: 36px; */
+}
+
+#login-box .form .item{
+  margin-top: 15px;
+}
+
+#login-box .form .item i{
+  font-size: 18px;
+  color: #fff;
+}
+
+#login-box .form .item input{
+  width: 180px;
+  font-size: 18px;
+  border: 0;
+  border-bottom: 2px solid #fff;
+  padding: 5px 10px;
+  background: #ffffff00;
+  color: #fff;
+}
+
+input::-webkit-input-placeholder {
+  color: rgb(161, 215, 219,0.5);
+}
+
+#login-box button{
+  margin-top: 15px;
+  width: 180px;
+  height: 30px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  border: 0;
+  border-radius: 15px;
+  /* background: #1abc9c; */
+  /* background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%); */
+  /* background-image: linear-gradient(to right, #e4afcb 0%, #b8cbb8 0%, #b8cbb8 0%, #e2c58b 30%, #c2ce9c 64%, #7edbdc 100%); */
+}
+
+.tooltip {
+  display: inline;
+}
+
+.tooltiptext {
+  visibility: hidden;
+   float:right; 
+  margin-left: 10px;
+  /* width: 120px; */
+  background-color: rgb(31, 29, 29);
+  color: rgb(245, 65, 65);
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 20px;
+  position: absolute;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* #login-box .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 110%;
+} */
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent rgb(31, 29, 29) transparent transparent;
+}
+/* .tooltip:hover .tooltiptext {
+  visibility: visible;
+  display: inline;
+} */
+
+
+
+.light {
+  width: 25%;
+  border-radius:5px;
+  position: relative;
+  padding: 10px 30px;
+  color: #8359c7;
+  background: linear-gradient(135deg, #4a78f7 0%,#b5f0fad7 100%);
+  font-size: 18px;
+  margin: auto;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  cursor: pointer;
+  overflow: hidden;
+  opacity:0.5;
+}
+
+.light:hover {
+  /* background-color: #7fa4f5; */
+  background: linear-gradient(135deg, #4a95f7 0%,#b5d5fad7 100%);
+  color: #9d67f3;
+}
+
+#loadings {
+  pointer-events: none;
+  color: rgb(252, 250, 250);
+}
+
+.div {
+  position: relative;
+  top: 10px;
+  right: 10%;
+}
+
+.div a {
+  position: relative;
+  padding: 10px 50px;
+  margin: 0 45px;
+  color: #ad7ff7;
+  text-decoration: none;
+  font-size: 30px;
+  text-transform: uppercase;
+  transition: 0.5s;
+  overflow: hidden;
+  -webkit-box-reflect: below 1px linear-gradient(transparent,#003);
+  pointer-events: none;
+  opacity:0.6;
+}
+.div a:hover {
+  background: #9391f8;
+  color: rgb(242, 243, 247);
+  box-shadow: 0 0 50px #a7b0fc;
+  transition-delay: 0.5s;
+}
+
+.div a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height:10px;
+  border-top: 2px solid #b0a7fc;
+  border-left: 2px solid #b0a7fc;
+  transition:0.5s;
+  transition-delay: 0.5s;
+}
+.div a:hover::before {
+  width: 100%;
+  height: 100%;
+  transition-delay: 0s;
+}
+.div a::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #89a5e2;
+  border-right: 2px solid #89a5e2;
+  
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+.div a:hover::after {
+  width: 100%;
+  height: 100%;
+  transition-delay: 0s;
+}

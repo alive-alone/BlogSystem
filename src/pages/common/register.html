@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>alive-alone</title>
+  <link rel="stylesheet" href="../../assets/css/loading.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <!-- https://www.layui.com/doc/modules/upload.html -->
+</head>
+<body>
+  <!-- 昵称、账号、密码、确定密码、出生日期、籍贯、个人介绍、验证码等字段实现注册。 -->
+  <div id="login-box">
+    <form action="" style="padding-bottom: 10px;">
+      <h1>Register</h1>
+      <div class="form">
+        <div class="item">
+          <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+          <input type="text" placeholder="昵称" id="name" oninput ="check(value,id)" />
+          <div class="tooltip">
+            <span id="checkname" class="tooltiptext"></span>
+          </div>
+        </div>
+        <!-- <div class="item">
+          <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+          <input list="sex" id="sexual" placeholder="性别" required />
+          <datalist id="sex">
+              <option value="男">
+              <option value="女">
+          </datalist>
+        </div> -->
+        <!-- <div class="item">
+          <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+          <input list="grade" id="grade01" placeholder="年级" required />
+          <datalist id="grade">
+              <option value="17">
+              <option value="18">
+              <option value="19">
+              <option value="20">
+              <option value="21">
+          </datalist>
+        </div> -->
+        <div class="item">
+          <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+          <input type="text" placeholder="账号" id="account" oninput ="check(value,id)" />
+          <div class="tooltip">
+            <span id="checkaccount" class="tooltiptext"></span>
+          </div>
+        </div>
+        <div class="item">
+          <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+          <input type="text" placeholder="手机号码" id="telephone" oninput ="check(value,id)" />
+          <div class="tooltip" id="div">
+            <span id="checkphone" class="tooltiptext"></span>
+          </div>
+        </div>
+        <div class="item">
+          <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+          <input type="text" id="birthday" placeholder="出生日期">
+          <div class="tooltip">
+            <span id="checkdate" class="tooltiptext"></span>
+          </div>
+        </div>
+        <div class="item">
+          <i class="fa fa-key" aria-hidden="true"></i>
+          <input type="password" placeholder="密码" id="pass" oninput ="check(value,id)"/>
+          <div class="tooltip">
+            <span id="useridSpan" class="tooltiptext"></span>
+          </div>
+        </div>
+        <div class="item">
+          <i class="fa fa-key" aria-hidden="true"></i>
+          <input type="password" placeholder="确认密码" id="passAgain" oninput ="check(value,id)" />
+          <div class="tooltip">
+            <span id="useridSpan" class="tooltiptext"></span>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  
+  <div class="div">
+		<a style="float: right;" id="reg-account">注 册</a>
+	</div>
+</body>
+<script src="../../../modules/layDate-v5.3.1/layDate-v5.3.1/laydate/laydate.js"></script>
+<script src="../../assets/js/loading/register.js"></script>
+<script src=""></script>
+</html>

@@ -1,0 +1,76 @@
+/* ul表单 */
+.usePosts {
+  padding: 0;
+}
+.usePosts span{
+  font-size: 14px;
+}
+
+/* 表单li */
+.useli {
+  border: 2px solid rgb(238, 238, 238);
+  padding: 20px 30px 10px 30px;
+  background-color: rgb(252, 252, 252);
+}
+
+/* 标题 */
+.title  {
+  display: flex;
+  align-items: center;
+  justify-content:space-between; 
+}
+.title h2 {
+  width: 600px;
+  margin: 5px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow:ellipsis; 
+  white-space: nowrap;
+  word-break: break-all;
+}
+.title div{
+  padding: 10px;
+}
+.title img {
+  width: 18px;
+}
+
+/* 下方内容 */
+.userbar dt {
+  float: left;
+}
+.userbar dd {
+  display: inline;
+}
+.userbar div {
+  display: inline;
+}
+
+/* 下方di */
+.userdl {
+  display: flex;
+  align-items: center;
+  justify-content:space-between; 
+  margin: 0;
+}
+/* 帖子内容 */
+.brief_intro {
+  width: 400px;
+  overflow: hidden;
+  text-align: center;
+  text-overflow:ellipsis; 
+  white-space: nowrap;
+  word-break: break-all;
+}
+
+/* 评论区 */
+.com_area dd{
+  margin: 0 0 0 20px;
+}
+.com_area {
+  align-items: center;
+  text-align: center;
+}
+.com_area img {
+  width: 16px;
+}

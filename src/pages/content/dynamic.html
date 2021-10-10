@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>alive-alone</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <!-- <link rel="stylesheet" href="../../assets/css/blog.css">
+  <link rel="stylesheet" href="../../assets/css/personal.css"> -->
+  <link rel="stylesheet" href="../../assets/css/dynamic.css">
+</head>
+<body>
+  <div class="dyn-body">
+    <!-- <div class="size-padding"></div>
+    <div class="container">
+      <div class="general-info">
+        <div class="general-info-t">
+          <div class="general-info-avatar">
+            <img src="../../assets/img/收藏.png" alt=""> 
+          </div> 
+          <div class="person-name">
+            <p id="per-name">name</p>
+          </div> 
+        </div>
+      </div>
+      <div class="container-profile">
+        <div class="base-info">
+          <div class="base-info-header"><h3>基本信息</h3></div>
+        </div>
+        <div class="base-info-content">
+          <div class="base-info-content-show">
+            <ul>
+              <li>
+                <div class="content-show-l">用户昵称</div>
+                <p class="content-show-r">alive</p>
+              </li>
+              <li>
+                <div class="content-show-l">真实姓名</div>
+                <span class="content-show-r">alive</span>
+              </li>
+              <li>
+                <div class="content-show-l">个人简介</div>
+                <span class="content-show-r">alone</span>
+              </li>
+              <li>
+                <div class="content-show-l">所在地区</div>
+                <p class="content-show-r">上海</p>
+              </li>
+              <li>
+                <div class="content-show-l">出生日期</div>
+                <span class="content-show-r">2002-01-01</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="size-padding"></div> -->
+    <form class="el-form" action="http://127.0.0.1:3000/add_posts" method="POST" id="el-form" target="add_posts">
+      <div class="el-form-item">
+        <div class="el-form-item_content">
+          <div class="pos-box">
+            <div class="input_title">
+              <textarea autocomplete="off" name="title" id="txtTitle" placeholder="请输入文章标题（5～100个字）" autofocus="autofocus"  class="el-textarea__inner"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="el-form-body">
+        <div class="el-form-body_content">
+          <div class="body-box">
+            <div class="body_content">
+              <textarea autocomplete="off" name="content" id="txtContent" placeholder="请输入文章内容"  class="el-textarea__below"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="moreDiv">
+        <div class="el-form-item_div">
+          <label for="tags" class="el-form-item_lable" style="width: 80px;">文章标签：</label>
+          <div class="el-form-item_content" style="margin-left: 80px;">
+            <div class="mark_selection">
+              <div class="mark_selection_title_el_tag">
+                <!---->
+                <span id="mark_selection_box_el_tag">
+                  <!-- <span class="mark_selection_box_el_tag">
+                    python
+                    <img src="../../assets/img/叉号.png"></img>
+                  </span> -->
+                </span>
+                <button type="button" class="tag__btn-tag" id="add_mark">
+                  <span>+添加文章标签</span>
+                </button>
+                <span class="notice_article_type">*</span>
+                <input name="tags" type="hidden" id="tages">
+              </div>
+              <!---->
+              <div class="mark_selection_box" style="display: none;" id="mark_selection_box">
+                <div class="mark_selection_box_left">
+                  <span class="mark_selection_box_title">推荐</span>
+                  <div class="selection_box_list">
+                    <ul class="mark_selection_ul" id="mark_selection_ul">
+                      <li>
+                        <a href="javascript:void(0);"  id="selection_li_python" class="selection_active">
+                          Python
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);"  id="selection_li_java" >
+                          Java
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);"  id="selection_li_js" >
+                          前端
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);"  id="selection_li_algo" >
+                          数据结构与算法
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);"  id="selection_li_library" >
+                          数据库管理
+                        </a>
+                      </li>
+                    </ul>
+
+                  </div>
+                </div>
+                <div class="mark_selection_box_right">
+                  <span class="mark_selection_box_title">添加标签</span>
+                  <div class="mark_selection_info" id="mark_selection_info">
+                    <div class="mark_selection_option" style="display: block;" id="mark_selection_python">
+                      <div class="mark_span">
+                        <span>python</span>
+                        <span>list</span>
+                        <span>django</span>
+                        <span>virtualenv</span>
+                        <span>torndo</span>
+                      </div>
+                    </div>
+                    <div class="mark_selection_option"  id="mark_selection_java">
+                      <div class="mark_span">
+                        <span>java</span>
+                        <span>eclipse</span>
+                        <span>tomcat</span>
+                        <span>spring</span>
+                        <span>maven</span>
+                      </div>
+                    </div>
+                    <div class="mark_selection_option"  id="mark_selection_js">
+                      <div class="mark_span">
+                        <span>JavaScript</span>
+                        <span>JQuery</span>
+                        <span>Vue</span>
+                        <span>ajax</span>
+                        <span>bootstrap</span>
+                      </div>
+                    </div>
+                    <div class="mark_selection_option"  id="mark_selection_algo">
+                      <div class="mark_span">
+                        <span>算法</span>
+                        <span>链表</span>
+                        <span>迭代</span>
+                        <span>排序</span>
+                        <span>递归</span>
+                      </div>
+                    </div>
+                    <div class="mark_selection_option"  id="mark_selection_library">
+                      <div class="mark_span">
+                        <span>MySQL</span>
+                        <span>框架</span>
+                        <span>数据仓库</span>
+                        <span>数据库开发</span>
+                        <span>Oracle</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <!---->
+          </div>
+        </div>
+        <div class="el-form-item_div">
+          <label for="tags" class="el-form-item_lable" style="width: 80px;">文章类型：</label>
+          <div class="el-form-item_content" style="margin-left: 80px;">
+            <label role="radio" tabindex="0" class="el-radio">
+              <span class="el-radio__input">
+                <span class="el-radio__inner"></span>
+                <input type="radio" name="article_type" checked='checked' aria-hidden="true" tabindex="-1" autocomplete="off" class="el-radio__original" value="original">
+              </span>
+              <span class="el-radio__label">
+                原创
+                <!---->
+              </span>
+            </label>
+            <label role="radio" tabindex="0" class="el-radio">
+              <span class="el-radio__input">
+                <span class="el-radio__inner"></span>
+                <input type="radio" name="article_type" aria-hidden="true" tabindex="-1" autocomplete="off" class="el-radio__original" value="repost">
+              </span>
+              <span class="el-radio__label">
+                转载
+                <!---->
+              </span>
+            </label>
+            <label role="radio" tabindex="0" class="el-radio">
+              <span class="el-radio__input">
+                <span class="el-radio__inner"></span>
+                <input type="radio" name="article_type" aria-hidden="true" tabindex="-1" autocomplete="off" class="el-radio__original" value="translated">
+              </span>
+              <span class="el-radio__label">
+                翻译
+                <!---->
+              </span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="dyn-bot">
+        <div class="opt-box" id="opt-box">
+          <input name="name" type="hidden" id="name">
+          <input name="account" type="hidden" id="account">
+          <input name="state" type="hidden" id="state">
+          <button type="button" class="el-button" value="draft">
+            <span>保存草稿</span>
+          </button>
+          <button type="button" class="el-button" value="timing">
+            <span>定时发布</span>
+          </button>
+          <button type="button" class="el-button" value="publish">
+           <span>发布博客</span>
+          </button>
+          <!-- <input type="submit" class="el-button" value="draft" name="state" />
+          <input type="submit" class="el-button" value="Timing transmission" name="state" />
+          <input type="submit" class="el-button" value="publish" name="state" /> -->
+            <!-- <span>发布博客</span> -->
+            <!-- <input type="submit" value="发布博客" /> -->
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="after_submit">
+    <iframe frameborder="0" name="add_posts" id="submit_iframe" ></iframe>
+  </div>
+</body>
+<script src="../../assets/js/personalCenter/dynamic.js"></script>
+</html>

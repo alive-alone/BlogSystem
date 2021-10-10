@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>alive-alone</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/blog.css">
+  <link rel="stylesheet" href="../../assets/css/personal.css">
+  <!-- <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script> -->
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/distpicker/2.0.3/distpicker.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div id="user-center-container">
+      <div class="container-left">
+        <ul>
+          <li class="">
+            <a href="javascript:void(0);"  id="personalInfo" class="personala">
+              个人资料
+            </a>
+          </li>
+          <li class="">
+            <a href="javascript:void(0);" id="accountSetting">
+              账号设置
+            </a>
+          </li> 
+          <li class="">
+            <a href="javascript:void(0);" id="collection">
+              我的收藏
+            </a>
+          </li> 
+        </ul>
+      </div>
+      <div class="container-right">
+        <div class="general-info">
+          <div class="general-info-t">
+            <div class="general-info-avatar">
+              <img src="../../assets/img/收藏.png" alt=""> 
+            </div> 
+            <div class="person-name">
+              <p id="per-name">name</p>
+            </div> 
+          </div>
+        </div>
+        <div class="container-profile">
+          <div class="base-info">
+            <div class="base-info-header"><h3>基本信息</h3></div>
+          </div>
+          <div class="base-info-content">
+            <div class="base-info-content-show" id="base-info-content-show">
+              <ul>
+                <li>
+                  <div class="content-show-l">用户昵称</div>
+                  <p class="content-show-r">alive</p>
+                </li>
+                <li>
+                  <div class="content-show-l">真实姓名</div>
+                  <span class="content-show-r">alive</span>
+                </li>
+                <li>
+                  <div class="content-show-l">个人简介</div>
+                  <span class="content-show-r">alone</span>
+                </li>
+                <li>
+                  <div class="content-show-l">所在地区</div>
+                  <p class="content-show-r">上海</p>
+                </li>
+                <li>
+                  <div class="content-show-l">出生日期</div>
+                  <span class="content-show-r">2002-01-01</span>
+                </li>
+              </ul>
+            </div>
+            <div class="base-info-content-edit" id="base-info-content-edit">
+              <form class="base-info-content-edit-form" action="http://127.0.0.1:3000/edit_information" method="POST" target="edit_info">
+                <div class="el-form-item">
+                  <label for="nickname" class="el-form-item__label">用户昵称</label>
+                  <div class="el-form-item__content">
+                    <div class="el-input">
+                      <input type="text" id="nickname" name="name" autocomplete="off" placeholder="请输入昵称" class="el-input__inner">
+                    </div> 
+                  </div>
+                </div>
+                <div class="el-form-item is-no-asterisk">
+                  <label for="realName" class="el-form-item__label">真实姓名</label>
+                  <div class="el-form-item__content">
+                    <div class="el-input">
+                      <input type="text" name="real_name" autocomplete="off" class="el-input__inner">
+                    </div>
+                  </div>
+                </div>
+                <div class="el-form-item edit-gender is-no-asterisk">
+                  <label for="gender" class="el-form-item__label">性别</label>
+                  <div class="el-form-item__content">
+                    <div class="el-radio__input">
+                      <input type="radio" id="man" name="sex" aria-hidden="true" tabindex="-1" autocomplete="off" class="el-radio__original" value="1">
+                      <span>男</span>
+                    </div>
+                    <div class="el-radio__input">
+                      <input type="radio" id="woman" name="sex" aria-hidden="true" tabindex="-1" autocomplete="off" class="el-radio__original" value="2">
+                      <span>女</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="el-form-item is-no-asterisk">
+                  <label for="birthday" class="el-form-item__label">出生日期</label>
+                  <div class="el-form-item__content">
+                    <div class="el-date-editor el-input el-input--prefix el-input--suffix el-date-editor--date">
+                      <input type="text" id="birthday" autocomplete="off" name="birthday"  placeholder="请设置您的出生日期" class="el-input__inner">
+                    </div>
+                  </div>
+                </div>
+                <div  class="el-form-item is-no-asterisk">
+                  <label for="area" class="el-form-item__label">所在地区</label>
+                  <!-- <div id="distpicker" data-toggle="distpicker" class="el-form-item__area" >
+                    <select name="area" data-province="--- 选择省 ---" id="select-province"></select>
+                    <select name="area" data-city="--- 选择市 ---"></select> 
+                    <select name="area" data-district="--- 选择区 ---"></select>
+                  </div> -->
+                  <div id="distpicker" data-toggle="distpicker" class="el-form-item__area" >
+                    <select name="area" id="select-province"></select>
+                    <select name="area" ></select> 
+                    <select name="area" ></select>
+                  </div>
+                </div>
+                <div class="el-form-item edit-intro is-no-asterisk">
+                  <label for="intro" class="el-form-item__label">个人简介</label>
+                  <div class="el-form-item__content">
+                    <div class="el-textarea">
+                      <textarea name="introduction" id="introduction" autocomplete="off" maxlength="300" placeholder="你很懒，还没有添加简介" class="el-textarea__inner"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <input name="account" type="hidden" id="account">
+                </div>
+                <div class=" el-form-item-bottom">
+                  <button type="button" class="el-button" id="el-form-botton-cancel">
+                    <span>取消</span>
+                  </button>
+                  <button type="submit" class="el-button" id="el-form-preser">
+                    <span>保存</span>
+                  </button>
+                </div>
+              </form>
+              <div class="after_submit" style="display: none;">
+                <iframe frameborder="0" name="edit_info" id="submit_iframe" ></iframe>
+              </div>
+              <!-- <div class="el-form-item__content el-form-item-bottom">
+                <button type="button" class="el-button" id="el-form-botton-cancel">
+                  <span>取消</span>
+                </button>
+                <button type="submit" class="el-button">
+                  <span>保存</span>
+                </button>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="container-profile" style="display: none;">
+          <div class="base-info">
+            <div class="account-body-title"><h3>账号设置</h3></div>
+          </div>
+          <div class="account-body-content">
+            <div class="account-body">
+              <ul>
+                <li class="accout-body-item">
+                  <span class="accout-body-span">
+                    <span>密</span>
+                    <span>码</span>
+                  </span> 
+                  <p>
+                    <a href="#" class="">设置密码</a>
+                  </p>
+                </li>
+                <li class="accout-body-item">
+                  <span class="accout-body-span">
+                    <span >手</span>
+                    <span>机</span>
+                  </span> 
+                  <p >
+                    <!-- <a href="#/user-center/account/password" class="">设置密码</a> -->
+                    <span>158***7167</span>
+                  </p>
+                </li>
+                <li class="accout-body-item">
+                  <span class="accout-body-span">
+                    <span >邮</span>
+                    <span>箱</span>
+                  </span> 
+                  <p >
+                    <a href="#" class="">绑定邮箱</a>
+                    <!-- <span>158***7167</span> /user-center/account/password-->
+                  </p>
+                </li>
+                <li class="accout-body-item">
+                  <span class="accout-body-span">
+                    <span >账户注销</span>
+                  </span> 
+                  <p >
+                    <a href="#" class="">立即注销</a>
+                    <!-- <span>158***7167</span> /user-center/account/password-->
+                  </p>
+                </li>
+                <li class="account-body-title">
+                  <!-- <div class="content-show-l">出生日期</div>
+                  <span class="content-show-r">2002-01-01</span> -->
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="container-profile" style="display: none;">
+          <div class="base-info">
+            <div class="account-body-title"><h3>收藏帖子</h3></div>
+          </div>
+          <div>
+            <ul class="usePosts" id="postsList">
+              <li class="useli">
+                <div>
+                  <div class="title">
+                    <div style="padding: 0;">
+                      <h2>title</h2>
+                    </div>
+                    <div>
+                      <a>
+                        <img src="../../assets/img/叉号.png">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="userbar">
+                    <dl class="userdl">
+                      <div>
+                        <dt>头像</dt>
+                        <dd style="margin-left:10px ;">name</dd>
+                      </div>
+                      <div class="brief_intro">内容</div>
+                      <div class="com_area">
+                        <dd>
+                          <a>
+                            <span>
+                              <img src="../../assets/img/点赞 (1).png" alt="">
+                            </span>
+                            <span>1</span>
+                          </a>
+                        </dd>
+                        <dd>
+                          <a>
+                            <span><img src="../../assets/img/浏览.png" alt=""></span>
+                            <span>1</span>
+                          </a>
+                        </dd>
+                        <dd>
+                          <a>
+                            <span><img src="../../assets/img/评论.png" alt=""></span>
+                            <span>1</span>
+                          </a>
+                        </dd>
+                      </div>
+                    </dl>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../../../modules/layDate-v5.3.1/layDate-v5.3.1/laydate/laydate.js"></script>
+<script src="../../assets/js/personalCenter/personal.js"></script>
+</html>
